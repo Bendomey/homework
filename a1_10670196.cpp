@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
 	int number;
 	char exit;
 	cout << "Please enter your name: ";
-	cin >> name;
+	getline(cin, name);
 	system("cls");
 	cout << "\t\t\t\t\t WELCOME " << name << "!\n" << endl;
 	while(!(exit == 'n')){
