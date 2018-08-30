@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 	
 	// checking to see whether the number is a prime
 	bool k = 1;
-	for (int i = 2; i < number; i++)
+	for (int i = 2; i < (number/2); i++)
 	{
 		if((number % i) == 0){
 			k = 0;
