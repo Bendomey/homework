@@ -44,10 +44,16 @@ double GCD(int big, int small){
 // check and see whether the second one is smaller than the big first or not
 	if (big < small)
 	{
-// when it is bigger, then swap them and run the same function
-		GCD(small, big);
-	}else
-
+// when it is bigger, then swap them and find the mod
+	remainder = small % big;
+	if(remainder == 0){
+		return big;
+	} else 
+	{
+//  else run the code over and over again
+		return GCD(small, remainder);
+	}
+	}else{
 // if it is greater find the mod of them
 		remainder = big % small;
 	
@@ -60,5 +66,5 @@ double GCD(int big, int small){
 //  else run the code over and over again
 		return GCD(big, remainder);
 	}
-
+}
 }
